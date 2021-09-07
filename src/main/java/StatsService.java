@@ -40,8 +40,7 @@ public class StatsService {
 
 
     public int monthMinAvg(long[] sales) {
-        long sum = summation(sales);
-        long avg = sum / sales.length;
+        long avg = calculatAvarege(sales);
         int monthMinAvg = 0;
         for (long sale : sales) {
             if (sale < avg) {
@@ -51,8 +50,7 @@ public class StatsService {
         return monthMinAvg;
     }
     public int monthMaxAvg(long[] sales) {
-        long sum = summation(sales);
-        long avg = sum / sales.length;
+        long avg = calculatAvarege(sales);
         int monthMaxAvg = 0;
         for (long sale : sales) {
             if (sale > avg) {
